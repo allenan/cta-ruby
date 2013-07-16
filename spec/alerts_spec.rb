@@ -31,8 +31,11 @@ describe Cta::Alerts::Overview do
   end
 end
 
-# describe Cta::Alerts::Details do
-#   it "should description" do
-    
-#   end
-# end
+describe Cta::Alerts::Details do
+  let(:details) { described_class.new routeid: 'red,p' }
+  let(:first_route) { details.routes.first }
+
+  it "should return an error code of 0" do
+    details.error_code.should be(0)
+  end
+end
