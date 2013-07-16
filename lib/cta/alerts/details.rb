@@ -19,7 +19,7 @@ module Cta
         @headline           = args["Headline"]
         @short_description  = args["ShortDescription"]
         @full_description   = args["FullDescription"]
-        @severity_score     = args["SeverityScore"]
+        @severity_score     = args["SeverityScore"].to_i
         @impact             = args["Impact"]
         @event_start        = parse_time args["EventStart"]
         @event_end          = parse_time args["EventEnd"]

@@ -56,7 +56,7 @@ describe Cta::Alerts::Details do
   end 
 
   it "should have severity_score" do
-    first_alert.severity_score.should be_a(String)
+    first_alert.severity_score.should be_a(Integer)
   end 
 
   it "should have impact" do
