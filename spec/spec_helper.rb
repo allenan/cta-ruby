@@ -18,3 +18,4 @@ RSpec.configure do |config|
 end
 
 Cta::Config.setup :train_api_key => ENV["TRAIN_API_KEY"]
+Cta::Config.setup :bus_api_key => ENV["BUS_API_KEY"]
