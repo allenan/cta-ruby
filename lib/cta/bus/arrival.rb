@@ -19,7 +19,7 @@ module Cta
     end
 
     class Prediction
-      attr_accessor :timestamp, :predicted_time, :stop_name, :vid, :route_id, :route_direction, :destination
+      attr_accessor :timestamp, :predicted_time, :stop_name, :vid, :route_id, :route_direction, :destination, :stop_id, :prediction_type
 
       def initialize( args )
         @timestamp        = Time.parse(args["tmstmp"])
@@ -29,6 +29,8 @@ module Cta
         @route_id         = args["rt"]
         @route_direction  = args["rtdir"]
         @destination      = args["des"]
+        @stop_id          = args["stpid"]
+        @prediction_type  = args["typ"]
       end
     end
   end
